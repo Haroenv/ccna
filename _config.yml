@@ -1,3 +1,5 @@
+# Site settings
+title: CCNA Summary
 markdown: kramdown
 sass:
-  style: condensed
+  style: compressed
