@@ -67,8 +67,8 @@ a {
 
 @media screen and (min-width: 40em) {
   .aside {
-		display: flex;
-		align-items: center;
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -81,7 +81,7 @@ a {
     }
   }
   .aside-content {
-		margin: auto;
+    margin: auto;
   }
   .content {
     width: 100%;
