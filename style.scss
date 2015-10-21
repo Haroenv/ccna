@@ -1,0 +1,27 @@
+---
+# Comment for Jekyll to process the frontmatter
+---
+
+$light: #CCC;
+$accent: #7f1734;
+
+body {
+  max-width: 60rem;
+  margin: 0 auto;
+  font-family: -apple-system, sans-serif;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+footer {
+  font-size: .8em;
+}
+
+code {
+  background-color: $light;
+  font-family: Monaco, monospace;
+  padding: .3em;
+  border-radius: .3em;
+}
