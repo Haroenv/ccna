@@ -3,16 +3,16 @@ layout: default
 ---
 {::options parse_block_html="true" /}
 <div class="aside">
-
+<div class="aside-content">
 * #markdown-toc
 {:toc}
 
-## CCNA Summary
+# {{ site.title }}
 
 By [Haroen Viaene](https://github.com/haroenv) and [Elias Meire](https://github.com/eliasmeire).
 
 Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
-
+</div>
 </div>
 
 {::options parse_block_html="true" /}
