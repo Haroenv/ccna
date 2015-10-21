@@ -40,11 +40,11 @@ code {
   background-color: $dark;
   color: $light;
   margin: 0;
-	ul {
-		padding-left: 0em;
-		ul {
-    	padding-left: 1em;
-		}
+  ul {
+    padding-left: 0em;
+    ul {
+      padding-left: 1em;
+    }
   }
   li {
     list-style-type: none;
@@ -66,36 +66,36 @@ a {
 
 @media screen and (min-width: 40em) {
   .aside {
-		display: flex;
+    display: flex;
     position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 18rem;
-		padding-left: 0;
-		justify-content: center;
-		overflow-y: auto; // if viewport height is too low, make scrollable
-		ul:first-child {
-			margin-bottom: 4rem;
-		}
-  }	
-	.aside-content {
-		align-self: center;
-	}
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 18rem;
+    padding-left: 0;
+    justify-content: center;
+    overflow-y: auto; // if viewport height is too low, make scrollable
+    ul:first-child {
+      margin-bottom: 4rem;
+    }
+  }
+  .aside-content {
+    align-self: center;
+  }
   .content {
     width: 100%;
-		margin-left: 18rem;
-		padding: 2rem 6rem;
+    margin-left: 18rem;
+    padding: 2rem 6rem;
   }
   body {
     flex-direction: row;
   }
 }
 @media screen and (min-width: 50em) {
-	.aside {
-		width: 22rem;
+  .aside {
+    width: 22rem;
   }
   .content {
-		margin-left: 22rem;
+    margin-left: 22rem;
   }
 }
