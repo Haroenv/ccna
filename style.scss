@@ -31,6 +31,10 @@ code {
   border-radius: .3em;
 }
 
+.content {
+  padding: 1rem;
+}
+
 .aside {
   padding-left: 1em;
   background-color: $dark;
@@ -57,14 +61,15 @@ a {
   }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 40em) {
   .aside {
     min-height: 100vh;
-    width: 20%;
-    float: left;
+    width: 30%;
   }
   .content {
-    width: 69%;
-    float: right;
+    width: 70%;
+  }
+  body {
+    flex-direction: row;
   }
 }
