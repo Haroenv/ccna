@@ -22,13 +22,9 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
 
 `reload`
 
-```scss
-a {
-  &:hover {
-    color: blue;
-  }
-}
-```
+`erase startup-config`
+
+`conf t`
 
 ## second level
 
