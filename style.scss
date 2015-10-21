@@ -67,36 +67,37 @@ a {
 
 @media screen and (min-width: 40em) {
   .aside {
-    display: flex;
+		display: flex;
+		align-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     width: 18rem;
     padding-left: 0;
-    justify-content: center;
     overflow-y: auto; // if viewport height is too low, make scrollable
     ul:first-child {
       margin-bottom: 4rem;
     }
   }
   .aside-content {
-    align-self: center;
+		margin: auto;
   }
   .content {
     width: 100%;
     margin-left: 18rem;
-    padding: 2rem 6rem;
+    padding: 2rem 2rem;
   }
   body {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 60em) {
   .aside {
     width: 22rem;
   }
   .content {
     margin-left: 22rem;
+		padding: 2rem 6rem;
   }
 }
