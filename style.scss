@@ -4,7 +4,7 @@
 
 $dark: #222;
 $light: #FEFEFE;
-$accent: #7f1734;
+$accent: #df5078;
 
 body {
   margin: 0;
@@ -31,7 +31,7 @@ code {
   border-radius: .3em;
 }
 
-#markdown-toc {
+.aside {
   padding-left: 1em;
   background-color: $dark;
   color: $light;
@@ -44,21 +44,27 @@ code {
   }
   a {
     color: $light;
+    &:visited {
+      color: darken($light,30%);
+    }
   }
 }
 
 a {
   color: $accent;
   &:visited {
-    color: darken($accent,5);
+    color: darken($accent,30%);
   }
 }
 
 @media screen and (min-width: 60em) {
-  #markdown-toc {
-    width: 30%;
+  .aside {
+    min-height: 100vh;
+    width: 20%;
+    float: left;
   }
   .content {
-    width: 70%;
+    width: 69%;
+    float: right;
   }
 }

@@ -1,9 +1,16 @@
 ---
 layout: default
 ---
-<!--
+{::options parse_block_html="true" /}
+<div class="aside">
+
 * #markdown-toc
-{:toc} -->
+{:toc}
+
+</div>
+
+{::options parse_block_html="true" /}
+<div class="content">
 
 # Hello World!
 
@@ -64,3 +71,5 @@ sdfqsdf
 sqdfqsdf
 
 # sdqf
+
+</div>
