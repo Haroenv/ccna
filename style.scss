@@ -2,17 +2,21 @@
 # Comment for Jekyll to process the frontmatter
 ---
 
-$light: #CCC;
+$dark: #222;
+$light: #FEFEFE;
 $accent: #7f1734;
 
 body {
-  max-width: 60rem;
-  margin: 0 auto;
+  margin: 0;
+  line-height: 1.2;
+  background-color: $light;
   font-family: -apple-system, sans-serif;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -20,12 +24,41 @@ footer {
 }
 
 code {
-  background-color: $light;
+  background-color: $dark;
+  color: $light;
   font-family: Monaco, monospace;
   padding: .3em;
   border-radius: .3em;
 }
 
 #markdown-toc {
-  background-color: $light;
+  padding-left: 1em;
+  background-color: $dark;
+  color: $light;
+  margin: 0;
+  ul {
+    padding-left: 1em;
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    color: $light;
+  }
+}
+
+a {
+  color: $accent;
+  &:visited {
+    color: darken($accent,5);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  #markdown-toc {
+    width: 30%;
+  }
+  .content {
+    width: 70%;
+  }
 }
