@@ -1,3 +1,6 @@
+---
+# comment
+---
 <!DOCTYPE html>
 <!--
     CCNA Summary
@@ -6,7 +9,7 @@
  -->
 <html lang="en">
 <head>
-    <title>  </title>
+    <title> CCNA Summary </title>
     <meta charset="utf-8" />
     <!-- saying that the browser doesn't need to rescale on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
