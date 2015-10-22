@@ -12,7 +12,7 @@ gem install jekyll
 
 which might require `ruby` to be installed, refer to [rubyinstaller.org](http://rubyinstaller.org).
 
-Serving the site is done by `jekyll s`, after which it's available at [localhost:4000](localhost:4000), or `jekyll b` and then it's available in the `_site` directory.
+Serving the site is done by `jekyll s`, after which it's available at [localhost:4000](http://localhost:4000), or `jekyll b` and then it's available in the `_site` directory.
 
 Style is written in `scss`.
 
