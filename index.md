@@ -18,62 +18,56 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
 {::options parse_block_html="true" /}
 <div class="content">
 
-# Hello World!
+# Reset device
+
+## Router
+
+Enter these commands in [priviliged EXEC mode](#command-modes) to reset the router.
+
+```
+erase startup config
+reload
+```
+
+This will delete the starup configuration and restart the router respectivily.
+
+
+## Switch
+The proces for a switch is almost identical. Enter these commands in [priviliged EXEC mode](#command-modes) to reset the switch.
+
+`erase startup-config`
+
+`delete vlan.dat`
 
 `reload`
 
-`erase startup-config`
+The `delete vlan.dat` command is necessary to delete the VLAN configuration.
 
-`conf t`
+# Command modes
 
-## second level
+Cisco networking devices have several command modes, each of them has a different command set, to go back to a lower (less privileged) command mode use the `exit` command.
 
-shizzles
+## User EXEC Mode
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempore eum officia, error illum sapiente corrupti eos cum quos ipsa, repellendus laudantium nam aspernatur, voluptatum amet quasi sit temporibus cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus minima qui obcaecati, reiciendis atque ea maxime, totam! Quo doloribus ipsum, praesentium est perspiciatis libero accusantium eaque quibusdam ex pariatur itaque.
+After you access the device, you are automatically in user EXEC command mode. The EXEC commands available at the user level are a subset of those available at the privileged level. This is the least privileged command mode.
 
-# bla
+## Priviliged EXEC Mode
 
-### bla bla
+The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. [Privileged access should be password-protected](#passwords) to prevent unauthorized use.
 
-sdfqsdf
+To access priviliged EXEC mode, enter the `enable` command from user EXEC mode.
 
+## Global Configuration Mode
 
-## bla bla bla
+Configuration mode commands apply to features that affect the device as a whole.
 
-### bla
+From priviliged EXEC mode you can reach global configuration mode by entering the `configure terminal` command.
 
-sqdfqsdf
+## Interface Configuration Mode
 
-# sdqf
+Interface configuration mode commands let you configure specific interfaces on the router.
 
+From global configuration mode you can reach interface configuration mode by entering the `interface [interface-name]` command.
 
-### bla bla
-
-sdfqsdf
-
-
-## bla bla bla
-
-### bla
-
-sqdfqsdf
-
-# sdqf
-
-`erase startup-config`
-
-### bla bla
-
-sdfqsdf
-
-
-## bla bla bla
-
-### bla
-
-sqdfqsdf
-
-# sdqf
-
+You can go back to the priviliged EXEC mode from this mode by entering the command `end`.
 </div>
