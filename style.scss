@@ -2,7 +2,7 @@
 # Comment for Jekyll to process the frontmatter
 ---
 
-$dark: #222;
+$dark: #222222;
 $light: #FEFEFE;
 $accent: #df5078;
 
@@ -17,6 +17,8 @@ body {
   hyphens: auto;
   display: flex;
   flex-direction: column;
+  color: $dark;
+  background-color: $light;
 }
 
 footer {
