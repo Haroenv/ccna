@@ -4,7 +4,7 @@
 
 $dark: #222;
 $light: #FEFEFE;
-$accent: #df5078;
+$links: #6ABED8;
 
 body {
   margin: 0;
@@ -32,36 +32,49 @@ code {
   line-height: 1.7;
 }
 
+a {
+  color: $links;
+  &:visited {
+    color: darken($links,10%);
+  }
+}
+
 .content {
   padding: 1rem;
 }
 
 .aside {
   padding-left: 1em;
-  background-color: $dark;
   color: $light;
+  background-color: $dark;
   margin: 0;
+}
+
+#markdown-toc {
+  padding-left: 0;
+  
+  // Hide site title and L3 titles
+  >li:first-child {
+    display: none;
+  }
+  ul ul {
+    display: none;
+  }
+
   ul {
-    padding-left: 0em;
-    ul {
-      padding-left: 1em;
-    }
+    padding-left: 2em;
   }
   li {
     list-style-type: none;
   }
   a {
     color: $light;
-    &:visited {
-      color: darken($light,30%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2em;
+    &:hover {
+      text-decoration: underline;
     }
-  }
-}
-
-a {
-  color: $accent;
-  &:visited {
-    color: darken($accent,30%);
   }
 }
 
