@@ -1,4 +1,5 @@
 <script>
+/* Google Analytics */
 'use strict';
 (function (i, s, o, g, r, a, m) {
   i['GoogleAnalyticsObject'] = r;
@@ -15,6 +16,7 @@
 ga('create', 'UA-27277115-3', 'auto');
 ga('send', 'pageview');
 
+/* no styles for IE/Edge */
 if (window.navigator.msPointerEnabled) {
   var links = document.querySelectorAll('link');
   Array.prototype.forEach.call(links, function (link) {
@@ -22,6 +24,7 @@ if (window.navigator.msPointerEnabled) {
   });
 }
 
+/* add links to headings */
 var headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 for (var i = 0; i < headings.length; i++) {
   headings[i].innerHTML = '<a href="#' + headings[i].id + '">' + headings[i].innerHTML + '</a>';
