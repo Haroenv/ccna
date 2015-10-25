@@ -55,10 +55,17 @@ code {
       svg {
         height: .5em;
         width: .5em;
+        display: none;
       }
 
       &:visited {
         color: inherit;
+      }
+    }
+
+    &:hover {
+      svg {
+        display: inline-block;
       }
     }
 
