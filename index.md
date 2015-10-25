@@ -53,7 +53,7 @@ After you access the device, you are automatically in user EXEC command mode. Th
 
 ## privileged EXEC Mode
 
-The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. [Privileged access should be password-protected](#passwords) to prevent unauthorized use.
+The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. [Privileged access should be password-protected](#passwords) to prevent unauthorised use.
 
 To access privileged EXEC mode, enter the `enable` command from user EXEC mode.
 

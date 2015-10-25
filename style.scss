@@ -6,11 +6,14 @@ $dark: #222222;
 $light: #FEFEFE;
 $accent: #6ABED8;
 
+$sans-serif: -apple-system, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+$monospace: Monaco, Consolas, monospace;
+
 body {
   margin: 0;
   line-height: 1.2;
   background-color: $light;
-  font-family: -apple-system, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-family: $sans-serif;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
@@ -28,7 +31,7 @@ footer {
 code {
   background-color: $dark;
   color: $light;
-  font-family: Monaco, monospace;
+  font-family: $monospace;
   padding: .3em .5em;
   border-radius: .3em;
   line-height: 1.7;
