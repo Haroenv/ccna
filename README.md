@@ -2,6 +2,10 @@
 
 A summary of all commands useable in CCNA 1 and 2.
 
+# Contributions
+
+Definitely not all commands have been added yet. Feel free to add your own contributions via a pull request! The text itself is written in [index.md](index.md), which is in [kramdown](http://kramdown.gettalong.org), a superset of markdown. If you have any questions, ask away!
+
 # Development
 
 The summary itself is written in Markdown in the [index.md](index.md) file. To view the site you'll need to install jekyll`:
