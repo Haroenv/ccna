@@ -24,9 +24,10 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
 
 Enter these commands in [privileged EXEC mode](#command-modes) to reset the router.
 
-<pre><code>erase startup-config
+~~~
+erase startup-config
 reload
-</code></pre>
+~~~
 
 This will delete the startup configuration and restart the router respectively.
 
@@ -34,10 +35,11 @@ This will delete the startup configuration and restart the router respectively.
 ## Switch
 The process for a switch is almost identical. Enter these commands in [privileged EXEC mode](#command-modes) to reset the switch.
 
-<pre><code>erase startup-config
+~~~
+erase startup-config
 delete vlan.dat
 reload
-</code></pre>
+~~~
 
 The `delete vlan.dat` command is necessary to delete the VLAN configuration.
 
