@@ -35,18 +35,18 @@ code {
   display: inline-block;
 }
 
-
-
-*:target {
-  color: $accent;
-}
-
 .content {
   padding: 1rem;
   a {
-    color: darken($accent,20%);
+    color: darken($accent,10%);
+    &:visited {
+      color: darken($accent,20%);
+    }
   }
-
+  
+  h1:target, h2:target, h3:target, h4:target {
+    animation: pulse 2s;
+  }
   h1:hover:after, h2:hover:after, h3:hover:after, h4:hover:after {
     content: '';
     display: inline-block;
@@ -136,4 +136,9 @@ code {
     margin-left: 22rem;
 		padding: 2rem 6rem;
   }
+}
+
+@keyframes pulse {
+    50%  {color: $accent;}
+    100% {color: $dark;}
 }
