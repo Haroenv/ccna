@@ -159,26 +159,15 @@ You can add a timeout for inactive users. To do this, in the [line configuration
 
 The following `show` commands will let you monitor the device configuration.
 
-Show the entire running configuration
-: `show running-config`
-
-Show the entire startup configuration
-: `show startup-config`
-
-Show the IPv4/v6 configuration
-: `show ip(v6) interface`
-
-Show the IPv4/v6 route
-: `show ip(v6) route`
-
-Show the vlan configuration
-: `show vlan`
-
-Show the MAC table
-: `show mac-address-table`
-
-Show the IOS version
-: `show version`
+Useful for | command
+---|---
+Show the entire running configuration | `show running-config`
+Show the entire startup configuration | `show startup-config`
+Show the IPv4/v6 configuration | `show ip(v6) interface`
+Show the IPv4/v6 route | `show ip(v6) route`
+Show the vlan configuration | `show vlan`
+Show the MAC table | `show mac-address-table`
+Show the IOS version | `show version`
 
 There are additional filters and arguments available for all these functions.
 

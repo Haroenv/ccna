@@ -48,21 +48,6 @@ pre {
   overflow: auto;
 }
 
-dd {
-  min-width: 15em;
-  display: inline-block;
-  margin: 0;
-  &:after{
-    display: block;
-    content: '';
-  }
-}
-
-dt {
-  display: inline-block;
-  min-width: 20em;
-}
-
 .content {
   padding: 1rem;
 
