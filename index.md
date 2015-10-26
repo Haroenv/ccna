@@ -22,15 +22,12 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
 
 ## Router
 
-Enter these commands in [privileged EXEC mode](#command-modes) to reset the router.
+Enter these commands in [privileged EXEC mode](#command-modes) to reset the router.This will delete the startup configuration and restart the router respectively.
 
 ~~~
 erase startup-config
 reload
 ~~~
-
-This will delete the startup configuration and restart the router respectively.
-
 
 ## Switch
 The process for a switch is almost identical. Enter these commands in [privileged EXEC mode](#command-modes) to reset the switch.
@@ -51,7 +48,7 @@ Cisco networking devices have several command modes, each of them has a differen
 
 After you access the device, you are automatically in user EXEC command mode. The EXEC commands available at the user level are a subset of those available at the privileged level. This is the least privileged command mode.
 
-## privileged EXEC Mode
+## Privileged EXEC Mode
 
 The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. [Privileged access should be password-protected](#passwords) to prevent unauthorised use.
 
@@ -71,13 +68,13 @@ From global configuration mode you can reach interface configuration mode by ent
 
 You can go back to the privileged EXEC mode from this mode by entering the command `end`.
 
-#Passwords
+# Passwords
 
 You can have two different passwords for any connection: one for the User EXEC mode, and one for the privileged EXEC mode.
 
 ## Privileged EXEC mode
 
-In [global configuration mode](#global-configuration-mode): first enable password protection by entering `service password-encryption`. Then you can enter the password for user EXEC mode like this: `enable secret [password]`.
+In [global configuration mode](#global-configuration-mode): first enable password encryption by entering `service password-encryption`. Then you can enter the password for user EXEC mode like this: `enable secret [password]`.
 
 ## Console
 
