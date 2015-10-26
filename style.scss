@@ -11,6 +11,10 @@ $monospace: Monaco, Consolas, monospace;
 
 body {
   margin: 0;
+
+  color: $dark;
+  background-color: $light;
+
   line-height: 1.2;
   background-color: $light;
   font-family: $sans-serif;
@@ -18,10 +22,9 @@ body {
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+
   display: flex;
   flex-direction: column;
-  color: $dark;
-  background-color: $light;
 }
 
 footer {
@@ -29,12 +32,15 @@ footer {
 }
 
 code {
-  background-color: $dark;
-  color: $light;
-  font-family: $monospace;
   padding: .2em;
   margin: .1em;
   border-radius: .2em;
+
+  background-color: $dark;
+  color: $light;
+
+  font-family: $monospace;
+
   display: inline-block;
 }
 
@@ -44,14 +50,17 @@ pre {
 
 .content {
   padding: 1rem;
+
   a {
     color: darken($accent,10%);
+
     &:visited {
       color: darken($accent,20%);
     }
   }
 
   h1,h2,h3,h4,h5,h6 {
+
     a {
       color: inherit;
       text-decoration: none;
@@ -60,6 +69,7 @@ pre {
         height: .4em;
         width: .4em;
         margin: 0 0 0.1em 0.2em;
+
         display: none;
       }
 
@@ -108,9 +118,10 @@ pre {
   padding-left: 0;
 
   // Hide site title and L3 titles
-  >li:first-child {
+  > li:first-child {
     display: none;
   }
+
   ul ul {
     display: none;
   }
@@ -118,14 +129,20 @@ pre {
   ul {
     padding-left: 2em;
   }
+
   li {
     list-style-type: none;
   }
+
   a {
-    color: $light;
-    text-decoration: none;
-    display: inline-block;
     padding: 0.2em;
+
+    color: $light;
+
+    text-decoration: none;
+
+    display: inline-block;
+
     &:hover {
       text-decoration: underline;
     }
@@ -134,27 +151,30 @@ pre {
 
 @media screen and (min-width: 40em) {
   .aside {
+    width: 18rem;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 18rem;
-    // padding-left: 0;
     overflow-y: auto; // if viewport height is too low, make scrollable
+
     ul:first-child {
       margin-bottom: 4rem;
     }
   }
+
   .aside-content {
     margin: auto;
   }
+
   .content {
     width: 100%;
     margin-left: 18rem;
     padding: 2rem 2rem;
   }
+
   body {
     flex-direction: row;
   }
@@ -170,6 +190,11 @@ pre {
 }
 
 @keyframes pulse {
-  50%  {color: $accent;}
-  100% {color: $dark;}
+  50%  {
+    color: $accent;
+  }
+
+  100% {
+    color: $dark;
+  }
 }
