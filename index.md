@@ -18,9 +18,11 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
 {::options parse_block_html="true" /}
 <div class="content">
 
-# Reset device
+# Basic configuration
 
-## Router
+## Reset device
+
+### Router
 
 Enter these commands in [privileged EXEC mode](#command-modes) to reset the router.This will delete the startup configuration and restart the router respectively.
 
@@ -29,7 +31,7 @@ erase startup-config
 reload
 ~~~
 
-## Switch
+### Switch
 The process for a switch is almost identical. Enter these commands in [privileged EXEC mode](#command-modes) to reset the switch.
 
 ~~~
@@ -40,41 +42,51 @@ reload
 
 The `delete vlan.dat` command is necessary to delete the VLAN configuration.
 
+## Save configuration
+
+You can save the current configuration by copying it to the startup configuration as follows: `copy running-config startup-config` in [privileged EXEC mode](#privileged-exec-mode).
+
+## Name device
+
+You can name a cisco device by entering the `hostname [name]` command in [privileged EXEC mode](#privileged-exec-mode).
+
+## Message of the day
+
+You can set a message of the day using the `banner motd "[message]"` (or with the `"` as any identical character) command in [global configuration mode](#global-configuration-mode).
+
+## Disable DNS-lookup
+
+You can disable DNS-lookup using the `no ip domain-lookup` command in [global configuration mode](#global-configuration-mode).
+
 # Command modes
 
 Cisco networking devices have several command modes, each of them has a different command set, to go back to a lower (less privileged) command mode use the `exit` command.
 
 ## User EXEC Mode
 
-After you access the device, you are automatically in user EXEC command mode. The EXEC commands available at the user level are a subset of those available at the privileged level. This is the least privileged command mode.
+After you access the device, you are automatically in user EXEC command mode. The EXEC commands available at the user level are a subset of those available at the privileged level. This is the least privileged command mode. User EXEC mode is denoted by a `>`.
 
 ## Privileged EXEC Mode
 
-The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. [Privileged access should be password-protected](#passwords) to prevent unauthorised use.
+The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. Privileged access should be password-protected to prevent unauthorised use, you can achieve this by entering the `enable secret [password]` command. It is highly recommend to also enable [password encryption](#password-encryption). Privileged EXEC mode is denoted by a `#`.
 
 To access privileged EXEC mode, enter the `enable` command from user EXEC mode.
 
 ## Global Configuration Mode
 
-Configuration mode commands apply to features that affect the device as a whole.
+Configuration mode commands apply to features that affect the device as a whole. Global configuration mode is denoted by `(config)#`.
 
 From privileged EXEC mode you can reach global configuration mode by entering the `configure terminal` command.
 
-## Interface Configuration Mode
+## Interface/Line Configuration Mode
 
-Interface configuration mode commands let you configure specific interfaces on the router.
+Interface/Line configuration mode commands let you configure specific interfaces/lines on the router. Interface configuration mode is denoted by `(config-if)#` and line configuration mode by `(config-line)#`.
 
-From global configuration mode you can reach interface configuration mode by entering the `interface [interface-name]` command.
+From global configuration mode you can reach interface configuration mode by entering the `interface [interface-name]` command. Similarly to reach line configuration mode you can enter the `line [line-name]` command.
 
 You can go back to the privileged EXEC mode from this mode by entering the command `end`.
 
-# Passwords
-
-You can have two different passwords for any connection: one for the User EXEC mode, and one for the privileged EXEC mode.
-
-## Privileged EXEC mode
-
-In [global configuration mode](#global-configuration-mode): first enable password encryption by entering `service password-encryption`. Then you can enter the password for user EXEC mode like this: `enable secret [password]`.
+# Management interfaces
 
 ## Console
 
@@ -89,7 +101,7 @@ line con 0
 
 ## Telnet
 
-To enable a password for a login through a telnet connection (vty or virtual terminal), enter in [global configuration mode](#global-configuration-mode):
+To configure telnet (vty or virtual terminal) with password protection, enter in [global configuration mode](#global-configuration-mode):
 
 ~~~
 line vty 0 15
@@ -99,14 +111,64 @@ line vty 0 15
 
 ## SSH
 
-To enable a password for a login through an ssh connection (secure shell), enter in [global configuration mode](#global-configuration-mode):
+To configure SSH (Secure SHell) with password protection, enter in [global configuration mode](#global-configuration-mode):
 
 ~~~
+crypto key generate RSA general-keys modulus 1024
 ip domain-name [your-domain.com]
 username [username] privilege 15 secret [password]
 line vty 0 15
  transport input ssh
  login local
 ~~~
+
+This will automatically disable telnet connections on the vty lines, if you still want to allow telnet connections enter `transport input ssh telnet` instead of `transport input ssh`.
+
+You can do some extra SSH-specific configuration in [global configuration mode](#global-configuration-mode):
+
+~~~
+ip ssh version [ssh-version-number]
+ip ssh time-out [seconds]
+ip ssh authentication-retries [retries-number]
+~~~
+
+## Security
+
+Password protection on management interfaces is always recommended but extra security measures can be taken.
+
+### Password restrictions
+You can force extra restrictions on passwords by entering these commands in [global configuration mode](#global-configuration-mode):
+
+~~~
+login block-for [seconds-blocked] attempts [attempts-number] within [seconds]
+security password min-length [minimum-chars]
+~~~
+
+The first line will block access for [seconds-blocked] if the user attemps to login [attempts-number] times within [seconds]. The second line restricts password length to [minimum-chars] or longer.
+
+### Password encryption
+
+To enable password encryption, enter `service password-encryption` in [global configuration mode](#global-configuration-mode). If you do not enable password encryption all password will be stored in clear text in the configuration file.
+
+### Timeout
+You can add a timeout for inactive users. To do this, in the [line configuration mode](#interfaceline-configuration-mode) of the line you want to configure, enter: `exec-timeout [minutes]`
+
+# Interface configuration
+
+# Debugging
+
+The following `show` commands will let you monitor the device configuration.
+
+Useful for | command
+---|---
+Show the entire running configuration | `show running-config`
+Show the entire startup configuration | `show startup-config`
+Show the IPv4/v6 configuration | `show ip(v6) interface`
+Show the IPv4/v6 route | `show ip(v6) route`
+Show the vlan configuration | `show vlan`
+Show the MAC table | `show mac-address-table`
+Show the IOS version | `show version`
+
+There are additional filters and arguments available for all these functions.
 
 </div>
