@@ -44,19 +44,19 @@ The `delete vlan.dat` command is necessary to delete the VLAN configuration.
 
 ## Save configuration
 
-You can save the current configuration by copying it to the startup configuration as follows: `copy running-config startup-config`.
+You can save the current configuration by copying it to the startup configuration as follows: `copy running-config startup-config` in [privileged EXEC mode](#privileged-exec-mode).
 
 ## Name device
 
-You can name a cisco device by entering the `hostname "[name]"` command.
+You can name a cisco device by entering the `hostname [name]` command in [privileged EXEC mode](#privileged-exec-mode).
 
 ## Message of the day
 
-You can set a message of the day using the `banner motd "[message]"` command.
+You can set a message of the day using the `banner motd "[message]"` (or with the `"` as any identical character) command in [global configuration mode](#global-configuration-mode).
 
 ## Disable DNS-lookup
 
-You can disable DNS-lookup using the `no ip domain-lookup` command.
+You can disable DNS-lookup using the `no ip domain-lookup` command in [global configuration mode](#global-configuration-mode).
 
 # Command modes
 
@@ -64,23 +64,23 @@ Cisco networking devices have several command modes, each of them has a differen
 
 ## User EXEC Mode
 
-After you access the device, you are automatically in user EXEC command mode. The EXEC commands available at the user level are a subset of those available at the privileged level. This is the least privileged command mode. User EXEC mode is denoted by a '>'.
+After you access the device, you are automatically in user EXEC command mode. The EXEC commands available at the user level are a subset of those available at the privileged level. This is the least privileged command mode. User EXEC mode is denoted by a `>`.
 
 ## Privileged EXEC Mode
 
-The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. Privileged access should be password-protected to prevent unauthorised use, you can achieve this by entering the `enable secret [password]` command. It is highly recommend to also enable [password encryption](#password-encryption). Privileged EXEC mode is denoted by a '#'.
+The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. Privileged access should be password-protected to prevent unauthorised use, you can achieve this by entering the `enable secret [password]` command. It is highly recommend to also enable [password encryption](#password-encryption). Privileged EXEC mode is denoted by a `#`.
 
 To access privileged EXEC mode, enter the `enable` command from user EXEC mode.
 
 ## Global Configuration Mode
 
-Configuration mode commands apply to features that affect the device as a whole. Global configuration mode is denoted by '(config)'.
+Configuration mode commands apply to features that affect the device as a whole. Global configuration mode is denoted by `(config)#`.
 
 From privileged EXEC mode you can reach global configuration mode by entering the `configure terminal` command.
 
 ## Interface/Line Configuration Mode
 
-Interface/Line configuration mode commands let you configure specific interfaces/lines on the router. Interface configuration mode is denoted by '(config-if)' and line configuration mode by 'config-line'.
+Interface/Line configuration mode commands let you configure specific interfaces/lines on the router. Interface configuration mode is denoted by `(config-if)#` and line configuration mode by `(config-line)#`.
 
 From global configuration mode you can reach interface configuration mode by entering the `interface [interface-name]` command. Similarly to reach line configuration mode you can enter the `line [line-name]` command.
 
