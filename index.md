@@ -155,6 +155,10 @@ You can add a timeout for inactive users. To do this, in the [line configuration
 
 # Interface configuration
 
+To enter a certain interface, you enter `interface [interface-name]` while in [global configuration mode](#global-configuration-mode). In that interface you can do the following things:
+
+> TO DO: all options for all interfaces
+
 # Debugging
 
 The following `show` commands will let you monitor the device configuration.
@@ -170,5 +174,17 @@ Show the MAC table | `show mac-address-table`
 Show the IOS version | `show version`
 
 There are additional filters and arguments available for all these functions.
+
+# VLAN configuration
+
+A VLAN is a virtual local area network, which is defined by a switch. This can be used to make sure that different devices don't have access to devices with for example a different set of permissions.
+
+> TO DO: everything to configure a VLAN
+
+## VLAN Trunking
+
+In some cases you might want devices to be on the same VLAN, even though they aren't connected to the same Switch. You can solve this by adding a router to one of the switches and setting up a VLAN trunk like this:
+
+> TO DO: commands needed
 
 </div>
