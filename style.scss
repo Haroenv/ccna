@@ -179,6 +179,7 @@ pre {
     flex-direction: row;
   }
 }
+
 @media screen and (min-width: 60em) {
   .aside {
     width: 22rem;
@@ -196,5 +197,17 @@ pre {
 
   100% {
     color: $dark;
+  }
+}
+
+blockquote {
+  padding: .3em;
+  padding-left: 1em;
+  border-left: .2em solid $dark;
+  background-color: lighten($dark,20%);
+  color: $light;
+
+  @media all and (max-width: 60em) {
+    margin: .2em;
   }
 }
