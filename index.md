@@ -7,6 +7,8 @@ layout: default
 * #markdown-toc
 {:toc}
 
+*[VLAN]: Virtual Local Area Network
+
 # {{ site.title }}
 
 By [Haroen Viaene](https://github.com/haroenv) and [Elias Meire](https://github.com/eliasmeire).
