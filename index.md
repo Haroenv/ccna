@@ -50,7 +50,7 @@ You can save the current configuration by copying it to the startup configuratio
 
 ## Name device
 
-You can name a cisco device by entering the `hostname [name]` command in [privileged EXEC mode](#privileged-exec-mode).
+You can name a cisco device by entering the `hostname [name]` command in [global configuration mode](#global-configuration-mode).
 
 ## Message of the day
 
@@ -70,7 +70,7 @@ After you access the device, you are automatically in user EXEC command mode. Th
 
 ## Privileged EXEC Mode
 
-The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. Privileged access should be password-protected to prevent unauthorised use, you can achieve this by entering the `enable secret [password]` command. It is highly recommend to also enable [password encryption](#password-encryption). Privileged EXEC mode is denoted by a `#`.
+The privileged command set includes those commands contained in user EXEC mode as well as commands that configure operating parameters. Privileged access should be password-protected to prevent unauthorised use, you can achieve this by entering the `enable secret [password]` command in [global configuration mode](#global-configuration-mode). It is highly recommend to also enable [password encryption](#password-encryption). Privileged EXEC mode is denoted by a `#`.
 
 To access privileged EXEC mode, enter the `enable` command from user EXEC mode.
 
