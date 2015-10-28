@@ -60,6 +60,10 @@ You can set a message of the day using the `banner motd "[message]"` (or with th
 
 You can disable DNS-lookup using the `no ip domain-lookup` command in [global configuration mode](#global-configuration-mode).
 
+## ip-address
+
+You can set the ip address of any [interface](#interfaceline-configuration-mode), by entering `ip address [ip-address] [subnet mask]`. On a switch this is usually done on a certain VLAN, on a router this can be done in the `loopback [number]` interface. The default gateway is given by `ip default-gateway [ip-address]`.
+
 # Command modes
 
 Cisco networking devices have several command modes, each of them has a different command set, to go back to a lower (less privileged) command mode use the `exit` command.
