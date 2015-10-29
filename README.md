@@ -8,7 +8,7 @@ Definitely not all commands have been added yet. Feel free to add your own contr
 
 # Development
 
-The summary itself is written in Markdown in the [index.md](index.md) file. To view the site you'll need to install jekyll`:
+The summary itself is written in Markdown in the [index.md](index.md) file. To view the site you'll need to install [jekyll](https://jekyllrb.com):
 
 ```
 gem install jekyll
