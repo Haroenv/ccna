@@ -3,6 +3,8 @@
 if (window.navigator.msPointerEnabled) {
   console.log("that's what you get for IE");
   (adsbygoogle = window.adsbygoogle || []).push({});
+  /* fix IE's wrong flex */
+  document.querySelector(".aside").style.display = "block";
 }
 
 /* add links to headings */
