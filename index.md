@@ -14,6 +14,9 @@ layout: default
 By [Haroen Viaene](https://github.com/haroenv) and [Elias Meire](https://github.com/eliasmeire).
 
 Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8125962319145805" data-ad-slot="3782140779" data-ad-format="auto"></ins>
+
 </div>
 </div>
 
