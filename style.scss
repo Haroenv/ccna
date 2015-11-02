@@ -170,7 +170,7 @@ pre {
   }
 
   .content {
-    width: 100%;
+    width: calc(100% - 22rem); //for the aside
     margin-left: 18rem;
     padding: 2rem 2rem;
   }
