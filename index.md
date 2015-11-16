@@ -13,7 +13,7 @@ layout: default
 
 By [Haroen Viaene](https://github.com/haroenv) and [Elias Meire](https://github.com/eliasmeire).
 
-Fork this on [GitHub](https://github.com/haroenv/ccna-summary)
+Fork this on [GitHub](https://github.com/haroenv/ccna-summary/blob/gh-pages/index.md) to add info.
 
 </div>
 </div>
