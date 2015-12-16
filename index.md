@@ -8,6 +8,7 @@ layout: default
 {:toc}
 
 *[VLAN]: Virtual Local Area Network
+*[IOS]: Internetwork Operating System
 
 # {{ site.title }}
 
@@ -185,6 +186,15 @@ There are additional filters and arguments available for all these functions.
 # VLAN configuration
 
 A VLAN is a virtual local area network, which is defined by a switch. This can be used to make sure that different devices don't have access to devices with for example a different set of permissions.
+
+## Making a new VLAN
+
+in [global configuration mode](#global-configuration-mode), you can make a new VLAN using the command `vlan {number}`. After that you give it the name using `name {the name of the VLAN}`; the state to active and don't shut down. 
+
+~~~
+state active
+no shutdown
+~~~
 
 > TO DO: everything to configure a VLAN
 
