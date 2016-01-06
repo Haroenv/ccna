@@ -86,6 +86,8 @@ Configuration mode commands apply to features that affect the device as a whole.
 
 From privileged EXEC mode you can reach global configuration mode by entering the `configure terminal` command.
 
+To execute a command that's usually only available from privileged EXEC or User EXEC mode, like `show ip interface brief`, you have to preced it by `do`. [source](https://supportforums.cisco.com/document/31051/executing-show-commands-global-configuration-mode)
+
 ## Interface/Line Configuration Mode
 
 Interface/Line configuration mode commands let you configure specific interfaces/lines on the router. Interface configuration mode is denoted by `(config-if)#` and line configuration mode by `(config-line)#`.
