@@ -86,7 +86,7 @@ Configuration mode commands apply to features that affect the device as a whole.
 
 From privileged EXEC mode you can reach global configuration mode by entering the `configure terminal` command.
 
-To execute a command that's usually only available from privileged EXEC or User EXEC mode, like `show ip interface brief`, you have to preced it by `do`. [source](https://supportforums.cisco.com/document/31051/executing-show-commands-global-configuration-mode)
+To execute a command that's usually only available from privileged EXEC or User EXEC mode, like `show ip interface brief`, you have to preced it by `do`. [^1]
 
 ## Interface/Line Configuration Mode
 
@@ -191,7 +191,7 @@ A VLAN is a virtual local area network, which is defined by a switch. This can b
 
 ## Making a new VLAN
 
-in [global configuration mode](#global-configuration-mode), you can make a new VLAN using the command `vlan {number}`. After that you give it the name using `name {the name of the VLAN}`; the state to active and don't shut down. 
+in [global configuration mode](#global-configuration-mode), you can make a new VLAN using the command `vlan {number}`. After that you give it the name using `name {the name of the VLAN}`; the state to active and don't shut down.
 
 ~~~
 state active
@@ -205,5 +205,9 @@ no shutdown
 In some cases you might want devices to be on the same VLAN, even though they aren't connected to the same Switch. You can solve this by adding a router to one of the switches and setting up a VLAN trunk like this:
 
 > TO DO: commands needed
+
+# Footnotes
+
+[^1]: <https://supportforums.cisco.com/document/31051/executing-show-commands-global-configuration-mode>
 
 </div>

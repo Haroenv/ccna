@@ -48,7 +48,7 @@ pre {
   overflow: auto;
 }
 
-.content {
+.content, .footnotes {
   padding: 1rem;
 
   a {
@@ -169,7 +169,7 @@ pre {
     margin: auto;
   }
 
-  .content {
+  .content, .footnotes {
     width: calc(100% - 22rem); //for the aside
     margin-left: 18rem;
     padding: 2rem 2rem;
@@ -177,6 +177,7 @@ pre {
 
   body {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -184,7 +185,7 @@ pre {
   .aside {
     width: 22rem;
   }
-  .content {
+  .content, .footnotes {
     margin-left: 22rem;
     padding: 2rem 6rem;
   }
