@@ -239,7 +239,7 @@ Shuts down the port if there is a security violation.
 
 ## RIP between networks with no subinterfaces
 
-If you want to make sure networks can communicate with eachother you'll have to configure RIP. For more info over RIP (http://www.9tut.com/rip-routing-protocol-tutorial)
+If you want to make sure networks can communicate with eachother you'll have to configure RIP. [^2]
 
 Going into RIP stance on router  | `router rip`
 Choicing RIP version | `version 2`
@@ -258,5 +258,5 @@ Connecting network | `ip address xxx.xxx.xxx.xxx xxx.xxx.xxx.xxx` ( for example 
 # Footnotes
 
 [^1]: <https://supportforums.cisco.com/document/31051/executing-show-commands-global-configuration-mode>
-
+[^2]: <http://www.9tut.com/rip-routing-protocol-tutorial>
 </div>
