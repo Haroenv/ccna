@@ -182,6 +182,9 @@ Show the IPv4/v6 route | `show ip(v6) route`
 Show the vlan configuration | `show vlan`
 Show the MAC table | `show mac-address-table`
 Show the IOS version | `show version`
+Show cdp neighbors | `show cdp neighbors`
+Show list of trunked ports | `show interface trunk`
+Show list of settings | `show run`
 
 There are additional filters and arguments available for all these functions.
 
@@ -206,8 +209,8 @@ In some cases you might want devices to be on the same VLAN, even though they ar
 For adding a VLAN trunk you need to go to an interface, for example f0/24.
 
 Adding mode trunk | `switchport mode trunk`
-Adding allowed VLAN's | `switchport trunk allowed vlan *`
-Adding native VLAN's | `switchport trunk native vlan `
+Adding allowed vlan's | `switchport trunk allowed vlan *`
+Adding native vlan's | `switchport trunk native vlan `
 
 Example code:
 
