@@ -209,7 +209,8 @@ Adding mode trunk | `switchport mode trunk`
 Adding allowed vlan's | `switchport trunk allowed vlan *`
 Adding native vlan's | `switchport trunk native vlan `
 
-Example code: 
+Example code:
+
 ~~~
 int f0/24
 switchport mode trunk
@@ -219,6 +220,7 @@ no shutdown
 ~~~
 
 > TO DO: commands needed
+
 # Footnotes
 
 [^1]: <https://supportforums.cisco.com/document/31051/executing-show-commands-global-configuration-mode>
