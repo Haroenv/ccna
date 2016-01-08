@@ -186,6 +186,7 @@ Show cdp neighbors | `show cdp neighbors`
 Show list of trunked ports | `show interface trunk`
 Show list of settings | `show run`
 Show port-security | `show port-security`
+Shop RIP database | `show ip rip database`
 
 There are additional filters and arguments available for all these functions.
 
