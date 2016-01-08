@@ -185,6 +185,7 @@ Show the IOS version | `show version`
 Show cdp neighbors | `show cdp neighbors`
 Show list of trunked ports | `show interface trunk`
 Show list of settings | `show run`
+Show port-security | `show port-security`
 
 There are additional filters and arguments available for all these functions.
 
@@ -222,7 +223,11 @@ switchport trunk native vlan 99
 no shutdown
 ~~~
 
-> TO DO: commands needed
+## Port-Security
+
+In some cases you want your device to be secure from overloading. For example you bandwidth, you want to make sure that the connections on your port has some bandwidth. Because if you have 100 devices on one port, the bandwidth has to be shared. With only 1 device on your port you have the whole bandwidth for that device. Another reason would be the Availability of the port, because if 100 devices have to communicate through 1 port, you'll have a huge que of actions your port has to finish.
+
+If you want a maximum of dynamic max-addresses you can use `switchport port-security maximum *` ( on * you can put a number ). If more addresses are detected, those will be deactivated. 
 
 # Footnotes
 
