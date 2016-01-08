@@ -206,8 +206,8 @@ In some cases you might want devices to be on the same VLAN, even though they ar
 For adding a VLAN trunk you need to go to an interface, for example f0/24.
 
 Adding mode trunk | `switchport mode trunk`
-Adding allowed vlan's | `switchport trunk allowed vlan *`
-Adding native vlan's | `switchport trunk native vlan `
+Adding allowed VLAN's | `switchport trunk allowed vlan *`
+Adding native VLAN's | `switchport trunk native vlan `
 
 Example code:
 
