@@ -9,6 +9,7 @@ layout: default
 
 *[VLAN]: Virtual Local Area Network
 *[IOS]: Internetwork Operating System
+*[RIP]: Routing Information Protocol
 
 # {{ site.title }}
 
