@@ -182,6 +182,11 @@ Show the IPv4/v6 route | `show ip(v6) route`
 Show the vlan configuration | `show vlan`
 Show the MAC table | `show mac-address-table`
 Show the IOS version | `show version`
+Show cdp neighbors | `show cdp neighbors`
+Show list of trunked ports | `show interface trunk`
+Show list of settings | `show run`
+Show port-security | `show port-security`
+Shop RIP database | `show ip rip database`
 
 There are additional filters and arguments available for all these functions.
 
@@ -206,8 +211,8 @@ In some cases you might want devices to be on the same VLAN, even though they ar
 For adding a VLAN trunk you need to go to an interface, for example f0/24.
 
 Adding mode trunk | `switchport mode trunk`
-Adding allowed VLAN's | `switchport trunk allowed vlan *`
-Adding native VLAN's | `switchport trunk native vlan `
+Adding allowed vlan's | `switchport trunk allowed vlan *`
+Adding native vlan's | `switchport trunk native vlan `
 
 Example code:
 
@@ -219,7 +224,36 @@ switchport trunk native vlan 99
 no shutdown
 ~~~
 
-> TO DO: commands needed
+## Port-Security
+
+In some cases you want your device to be secure from overloading. For example you bandwidth, you want to make sure that the connections on your port has some bandwidth. Because if you have 100 devices on one port, the bandwidth has to be shared. With only 1 device on your port you have the whole bandwidth for that device. Another reason would be the Availability of the port, because if 100 devices have to communicate through 1 port, you'll have a huge que of actions your port has to finish.
+
+If you want a maximum of dynamic max-addresses you can use `switchport port-security maximum *` ( on * you can put a number ). If more addresses are detected, those will be deactivated. 
+
+`switchport port-security violation protect`
+Drops all the packets from the insecure hosts at the port-security process level but does not increment the security-violation count.
+`switchport port-security violation restrict`
+Drops all the packets from the insecure hosts at the port-security process level and increments the security-violation count.
+`switchport port-security violation shutdown`
+Shuts down the port if there is a security violation.
+
+## RIP between networks with no subinterfaces
+
+If you want to make sure networks can communicate with eachother you'll have to configure RIP. For more info over RIP (http://www.9tut.com/rip-routing-protocol-tutorial)
+
+Going into RIP stance on router  | `router rip`
+Choicing RIP version | `version 2`
+Disable auto-summary | `no auto-summary`
+Putting RIP for a | `network xxx.xxx.xxx.x` ( network 172.16.30.0 )
+
+## RIP between networks with subinterfaces
+
+If you're having a whole subnetworking ( vlan's ) on one end of your router you'll need some more settings
+
+Making your port a passive interface  | `passive-interface gigabitEthernet0/*`
+Going to surtain subinterface | `Interface g0/*.*` ( for example int gigabitEthernet0/0.10, using vlan 10 )
+Making vlan able to send through | `encapsulation dot1Q *` ( for encapsulation dot1Q 10, for vlan 10 )
+Connecting network | `ip address xxx.xxx.xxx.xxx xxx.xxx.xxx.xxx` ( for example ip address 172.16.30.254 255.255.255.0 )
 
 # Footnotes
 
