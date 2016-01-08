@@ -203,6 +203,21 @@ no shutdown
 ## VLAN Trunking
 
 In some cases you might want devices to be on the same VLAN, even though they aren't connected to the same Switch. You can solve this by adding a router to one of the switches and setting up a VLAN trunk like this:
+For adding a VLAN trunk you need to go to an interface, for example f0/24.
+
+Adding mode trunk | `switchport mode trunk`
+Adding allowed vlan's | `switchport trunk allowed vlan *`
+Adding native vlan's | `switchport trunk native vlan `
+
+Example code:
+
+~~~
+int f0/24
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40
+switchport trunk native vlan 99
+no shutdown
+~~~
 
 > TO DO: commands needed
 
