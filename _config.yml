@@ -1,5 +1,7 @@
 # Site settings
 title: CCNA Summary
 markdown: kramdown
+kramdown:
+  input: GFM
 sass:
   style: compressed

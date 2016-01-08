@@ -31,19 +31,19 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary/blob/gh-pages/inde
 
 Enter these commands in [privileged EXEC mode](#command-modes) to reset the router.This will delete the startup configuration and restart the router respectively.
 
-~~~
+```
 erase startup-config
 reload
-~~~
+```
 
 ### Switch
 The process for a switch is almost identical. Enter these commands in [privileged EXEC mode](#command-modes) to reset the switch.
 
-~~~
+```
 erase startup-config
 delete vlan.dat
 reload
-~~~
+```
 
 The `delete vlan.dat` command is necessary to delete the VLAN configuration.
 
@@ -103,45 +103,45 @@ You can go back to the privileged EXEC mode from this mode by entering the comma
 
 To enable a password for a login through the console port, enter in [global configuration mode](#global-configuration-mode):
 
-~~~
+```
 line con 0
  password [password]
  login
  logging synchronous
-~~~
+```
 
 ## Telnet
 
 To configure telnet (vty or virtual terminal) with password protection, enter in [global configuration mode](#global-configuration-mode):
 
-~~~
+```
 line vty 0 15
  password [password]
  login
-~~~
+```
 
 ## SSH
 
 To configure SSH (Secure SHell) with password protection, enter in [global configuration mode](#global-configuration-mode):
 
-~~~
+```
 crypto key generate RSA general-keys modulus 1024
 ip domain-name [your-domain.com]
 username [username] privilege 15 secret [password]
 line vty 0 15
  transport input ssh
  login local
-~~~
+```
 
 This will automatically disable telnet connections on the vty lines, if you still want to allow telnet connections enter `transport input ssh telnet` instead of `transport input ssh`.
 
 You can do some extra SSH-specific configuration in [global configuration mode](#global-configuration-mode):
 
-~~~
+```
 ip ssh version [ssh-version-number]
 ip ssh time-out [seconds]
 ip ssh authentication-retries [retries-number]
-~~~
+```
 
 ## Security
 
@@ -150,10 +150,10 @@ Password protection on management interfaces is always recommended but extra sec
 ### Password restrictions
 You can force extra restrictions on passwords by entering these commands in [global configuration mode](#global-configuration-mode):
 
-~~~
+```
 login block-for [seconds-blocked] attempts [attempts-number] within [seconds]
 security password min-length [minimum-chars]
-~~~
+```
 
 The first line will block access for [seconds-blocked] if the user attemps to login [attempts-number] times within [seconds]. The second line restricts password length to [minimum-chars] or longer.
 
@@ -199,10 +199,10 @@ A VLAN is a virtual local area network, which is defined by a switch. This can b
 
 in [global configuration mode](#global-configuration-mode), you can make a new VLAN using the command `vlan {number}`. After that you give it the name using `name {the name of the VLAN}`; the state to active and don't shut down.
 
-~~~
+```
 state active
 no shutdown
-~~~
+```
 
 > TO DO: everything to configure a VLAN
 
@@ -217,19 +217,19 @@ Adding native vlan's | `switchport trunk native vlan `
 
 Example code:
 
-~~~
+```
 int f0/24
 switchport mode trunk
 switchport trunk allowed vlan 10,20,30,40
 switchport trunk native vlan 99
 no shutdown
-~~~
+```
 
 ## Port-Security
 
 In some cases you want your device to be secure from overloading. For example you bandwidth, you want to make sure that the connections on your port has some bandwidth. Because if you have 100 devices on one port, the bandwidth has to be shared. With only 1 device on your port you have the whole bandwidth for that device. Another reason would be the Availability of the port, because if 100 devices have to communicate through 1 port, you'll have a huge que of actions your port has to finish.
 
-If you want a maximum of dynamic max-addresses you can use `switchport port-security maximum *` ( on * you can put a number ). If more addresses are detected, those will be deactivated. 
+If you want a maximum of dynamic max-addresses you can use `switchport port-security maximum *` ( on * you can put a number ). If more addresses are detected, those will be deactivated.
 
 `switchport port-security violation protect`
 Drops all the packets from the insecure hosts at the port-security process level but does not increment the security-violation count.
