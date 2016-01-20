@@ -231,12 +231,9 @@ In some cases you want your device to be secure from overloading. For example yo
 
 If you want a maximum of dynamic max-addresses you can use `switchport port-security maximum *` ( on * you can put a number ). If more addresses are detected, those will be deactivated.
 
-`switchport port-security violation protect`
-Drops all the packets from the insecure hosts at the port-security process level but does not increment the security-violation count.
-`switchport port-security violation restrict`
-Drops all the packets from the insecure hosts at the port-security process level and increments the security-violation count.
-`switchport port-security violation shutdown`
-Shuts down the port if there is a security violation.
+`switchport port-security violation protect` | Drops all the packets from the insecure hosts at the port-security process level but does not increment the security-violation count.
+`switchport port-security violation restrict` | Drops all the packets from the insecure hosts at the port-security process level and increments the security-violation count.
+`switchport port-security violation shutdown` | Shuts down the port if there is a security violation.
 
 # RIP
 
