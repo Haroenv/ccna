@@ -5,3 +5,6 @@ kramdown:
   input: GFM
 sass:
   style: compressed
+collections:
+  chapters:
+    output: false
