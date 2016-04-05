@@ -3,6 +3,7 @@ title: CCNA Summary
 markdown: kramdown
 kramdown:
   input: GFM
+  toc_levels: "2,3"
 sass:
   style: compressed
 collections:

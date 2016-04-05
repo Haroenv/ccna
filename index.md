@@ -25,13 +25,13 @@ Fork this on [GitHub](https://github.com/haroenv/ccna-summary/blob/gh-pages/inde
 
 {% assign chapters = site.chapters | sort: 'order' %}
 {% for chapter in chapters %}
-<!-- <section> -->
+<section>
 
-# {{chapter.order}}. {{chapter.title}}
+## {{chapter.order}}. {{chapter.title}}
 
 {{chapter.content}}
 
-<!-- </section> -->
+</section>
 {% endfor %}
 
 # Footnotes
