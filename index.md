@@ -13,9 +13,9 @@ layout: default
 
 # {{ site.title }}
 
-By [Haroen Viaene](https://github.com/haroenv) and [Elias Meire](https://github.com/eliasmeire).
+By [Haroen Viaene](https://github.com/Haroenv) and [Elias Meire](https://github.com/eliasmeire).
 
-Fork this on [GitHub](https://github.com/haroenv/ccna-summary/blob/gh-pages/index.md) to add info.
+Fork this on [GitHub](https://github.com/haroenv/ccna/) to add info.
 
 </div>
 </div>
