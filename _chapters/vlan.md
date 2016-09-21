@@ -16,7 +16,16 @@ state active
 no shutdown
 ```
 
-> TO DO: everything to configure a VLAN
+</section>
+<section>
+
+### Assigning a VLAN to an interface
+
+To enable a certain vlan, you have to go to `interface [name]`, and then:
+
+```
+switchport acces vlan [number]
+```
 
 </section>
 <section>
